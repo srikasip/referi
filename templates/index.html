@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="copyright"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <meta content="index,follow" name="robots"/>
+    <meta content="Manage your clinic referrals" name="DC.title"/>
+
+    <title>
+      Referi - Manage your referrals
+    </title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One|Crimson+Text" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/home.css')}}" media="screen" />
+  </head>
+  <body>
+    <div class="header transHeader">
+      <div class="title">referi.co</div>
+      <div class="subtitle">Mint for medical referrals</div>
+    </div>
+    <div class="playdough">
+      <div id="caption1" class="caption active">
+          Safely Improve your surgical yield up to 80%.
+      </div>
+      <div id="caption2" class="caption">
+          Manage your referral base.
+      </div>
+      <div id="caption3" class="caption">
+          Understand your practice.
+      </div>
+      <div class="CTABox">
+        <button class="CTA">
+          Get Started Now
+        </button>
+      </div>
+    </div>
+    <div class="scene" id="scene1">
+      <h1>Managing your referral base matters</h1>
+      <p>
+        The average surgical yield for General Surgery clinics is 17%. That is, fewer than 2 in 10 patients seen by surgeons actually result in surgery. That number is even worse in surgical sub-specialties, like Spine or Orthopedic clinics.
+      </p>
+      <p>
+        Such a low yield is bad for the patient and the provider.
+      </p>
+      <p>
+        Maintaining a strong referral base and rewarding the best referring physicians and practices is the most effective way to improve your surgical yield.
+      </p>
+      <p>
+        Let us help you manage and grow a healthy referral base.
+      </p>
+      <div class="CTABox">
+        <button class="CTA">
+          Get Started Now
+        </button>
+      </div>
+    </div>
+    <div class="scene" id="scene2">
+      <h1>Our product</h1>
+      <ul>
+        <li>Track your referring physicians and practices</li>
+        <li>Get insights into the best and worst behavors in your referral base</li>
+        <li>Get insights into new entrants into your referral base and big shifts</li>
+        <li>Track appropriateness and complexity of referrals</li>
+        <li>Get insights into who is adding the most value and who is costing your practice a lot of time</li>
+        <li>Get recommendations and easy tools to strengthen good relationships and phase out bad relationships</li>
+      </ul>
+      With referi, you can get all of this data with realtime web and mobile dashboards.
+
+      <div class="CTABox">
+        <button class="CTA">
+          Get Started Now
+        </button>
+      </div>
+    </div>
+    <div class="scene" id="scene3">
+      <h1>Academic research</h1>
+      <ul>
+        <li>
+          <a href="https://www.ncbi.nlm.nih.gov/pubmed/24218748">
+            Average surgical yield is 17% for general surgery clinics.
+          </a>
+        </li>
+        <li>
+          <a href="http://www.annfammed.org/content/2/3/245.short">
+            After skill and insurance acceptance, communication is the most significant reason for choosing a referral practice.
+          </a>
+        </li>
+        <li>
+          <a href="https://link.springer.com/article/10.1007/s11606-011-1861-z">
+            In choosing specific physicians to refer to, PCPs are more often concerned with between-physician communication and patient access. 
+          </a>
+        </li>
+      </ul>
+      <div class="CTABox">
+        <button class="CTA">
+          Get Started Now
+        </button>
+      </div>
+    </div>
+    <div class="scene" id="scene4">
+      <h1>Our team</h1>
+      <h4>The Brothers Prasad</h4>
+      <div class="teamBlock">
+        <img class="teamPic" src="../static/images/srini.jpeg" />
+        <p class="teamCaption">
+          Srini is a spine surgeon and attending faculty at Jefferson University.
+          In addition to running his practice, Srini is an avid maker and the creative force behind this product.
+        </p>
+      </div>
+      <div class="teamBlock">
+        <img class="teamPic" src="../static/images/shankar.jpeg" />
+        <p class="teamCaption">
+          Shankar is a statistician and faculty member at Brown University.
+          In addition to teaching, Shankar is the associate provost at Brown University, 
+          and is an avid data junky.
+        </p>
+      </div>
+      <div class="teamBlock">
+        <img class="teamPic" src="../static/images/srikar.jpeg" />
+        <p class="teamCaption">
+          Srikar is an x-Googler and the coder behind this product.
+        </p>
+      </div>
+
+      <div class="CTABox">
+        <button class="CTA">
+          Get Started Now
+        </button>
+      </div>
+    </div>
+
+    <div id="overlay">
+      <div id="signup">
+        <span class="closer">X</span>
+        <h1>Signup!</h1>
+        <p>
+          We are taking signups for our beta Launch!
+          Thanks so much for signing up. 
+          Don't worry. we won't share your information with anyone.
+        </p>
+        <div class="signupLine">
+          <span class="suLabel">
+            Name:
+          </span>
+          <input id="nameVal" type="text" class="suContent"/>
+        </div>
+        <div class="signupLine">
+          <span class="suLabel">
+            Email<span>*</span>:
+          </span>
+          <input id="emailVal" type="text" class="suContent"/>
+          <div id="emailValid" class="validator">**This is a required field</div>
+        </div>
+        <div class="signupLine">
+          <span class="suLabel">
+            Specialty<span>*</span>:
+          </span>
+          <input id="specVal" type="text" class="suContent"/>
+          <div id="specValid" class="validator">**This is a required field</div>
+        </div>
+        <div class="signupLine">
+          <span class="suLabel">
+            Role in Practice<span>*</span>:
+          </span>
+          <input id="roleVal" type="text" class="suContent"/>
+          <div id="roleValid" class="validator">**This is a required field</div>
+        </div>
+        <div class="btnBox">
+          <button id="btnCancel">Cancel</button>
+          <button id="btnSignup">Signup</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

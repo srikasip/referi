@@ -1,0 +1,231 @@
+html, body {
+  width:100%;
+  height:100%;
+  font-family:"Crimson Text", sans-serif;
+  font-size:14pt;
+  /*background-color:rgb(10,25,40);*/
+}
+h1,h2,h3,h4,.title, .logo {
+  font-family:"Rozha One", sans-serif;
+}
+h1, h2,h3,h4 {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+.title, .logo {
+  line-height:2.5em;
+  font-size:2em;
+}
+.subtitle {
+  /*font-family:"Rozha One", sans-serif;*/
+  font-size:1.5;
+  margin-top:-1em;
+}
+.header {
+  color:white;
+  width:100%;
+  padding:16px;
+  position:fixed;
+  z-index:3;
+  top:0;
+  left:0;
+  vertical-align: middle;
+  text-align: left;
+  transition: background 0.5s ease-in-out;
+}
+.transHeader {
+  background-color:rgba(10,25,40,0.6);
+}
+.opaqueHeader {
+  background-color:rgba(10,25,40,1.0);
+}
+.playdough {
+  background-image:url('../images/evocImg1.jpg');
+  /*background-image:url('../images/dashprac.png');*/
+  background-position:center center;
+  background-repeat:none;
+  background-size:cover;
+  width:100%;
+  height:90vh;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  text-align: center;
+}
+
+#scene1 {
+  margin-top:90vh;
+}
+.scene {
+  /*background-color:#9ebed8;*/
+  background-color:#fff;
+  min-height:90vh;
+  padding:16px;
+  position:relative;
+  z-index:2;
+}
+
+.caption {
+  color:#fff;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  font-size:2.5em;
+  vertical-align: middle;
+  width:100%;
+  margin-top:5em;
+  display:none;
+  padding:16px;
+}
+
+.caption.active {
+  display:block;
+}
+.caption p {
+  width:100%;
+}
+button.CTA {
+  height:15vh;
+  font-size:1.5em;
+  padding-right:16px;
+  padding-left:16px;
+  color:#fff;
+  background-color:rgb(245,108,31);
+  border-radius: 10px;
+  border:none 0px transparent;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:16px;
+}
+
+button.CTA:hover {
+  background-color:rgb(251,79,6);
+}
+button.CTA:hover {
+  background-color:rgb(230,91,20);
+}
+
+.CTABox {
+  clear:both;
+  height:15vh;
+  text-align:center;
+  margin-top:3em;
+}
+.playdough .CTABox {
+  margin-top:0px;
+}
+.teamPic {
+  height:300px;
+  width:300px;
+  
+}
+.teamBlock
+{
+  width:332px;
+  float:left;
+  margin:16px;
+}
+.teamCaption
+{
+  width:100%;
+  height:auto;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    text-align:center;
+}
+#signup
+{
+  min-width:600px;
+  width:50%;
+  margin-top:8em;
+  height:450px;
+  background-color:white;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+}
+span.closer
+{
+  display:block;
+  position:absolute;
+  top:16px;
+  right:16px;
+  font-family:Helvetica;
+  cursor: pointer;
+  color:tomato;
+}
+
+.signupLine
+{
+  float:none;
+  clear:both;
+  width:100%;
+  padding:16px;
+}
+span.suLabel
+{
+  display:block;
+  float:left;
+  text-align: right;
+  width:25%;
+  margin-right:8px;
+}
+.suLabel span{
+  vertical-align: super;
+  color:tomato;
+}
+input.suContent
+{
+  width:70%;
+  margin-top:-5px;
+}
+#signup p{
+  padding:16px;
+  text-align:left;
+}
+button#btnSignup
+{
+  padding-right:16px;
+  padding-left:16px;
+  color:#fff;
+  background-color:rgb(245,108,31);
+  border-radius: 10px;
+  border:none 0px transparent;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:16px;
+}
+button#btnCancel{
+  padding-right:16px;
+  padding-left:16px;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:16px;  
+}
+
+div.validator{
+  clear:both;
+  color:tomato;
+  text-align: right;
+  width:100%;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:0px;
+  padding-bottom:0px;
+  height:0px;
+  overflow:visible;
+  font-size:0.75em;
+  display:none;
+}
