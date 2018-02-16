@@ -22,6 +22,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Rozha+One|Crimson+Text" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/home.css')}}" media="screen" />
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114277036-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114277036-1');
+    </script>
   </head>
   <body>
     <div class="header transHeader">
@@ -39,7 +49,7 @@
           Understand your practice.
       </div>
       <div class="CTABox">
-        <button class="CTA">
+        <button class="CTA" id="btnSceneHeader">
           Get Started Now
         </button>
       </div>
@@ -59,7 +69,7 @@
         Let us help you manage and grow a healthy referral base.
       </p>
       <div class="CTABox">
-        <button class="CTA">
+        <button class="CTA" id="btnScene1">
           Get Started Now
         </button>
       </div>
@@ -77,7 +87,7 @@
       With referi, you can get all of this data with realtime web and mobile dashboards.
 
       <div class="CTABox">
-        <button class="CTA">
+        <button class="CTA" id="btnScene2">
           Get Started Now
         </button>
       </div>
@@ -102,7 +112,7 @@
         </li>
       </ul>
       <div class="CTABox">
-        <button class="CTA">
+        <button class="CTA" id="btnScene3">
           Get Started Now
         </button>
       </div>
@@ -133,7 +143,7 @@
       </div>
 
       <div class="CTABox">
-        <button class="CTA">
+        <button class="CTA" id="btnScene4">
           Get Started Now
         </button>
       </div>

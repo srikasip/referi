@@ -53,12 +53,16 @@ function enableGetStarted()
 {
   $("button.CTA").click(function(e){
     document.getElementById("overlay").style.display = "block";
+    btnID = $(this).attr("id");
+    ga('send', 'event', 'CTA', 'start', btnID);
   });
   $(".closer").click(function(){
     document.getElementById("overlay").style.display = "none";
+    ga('send', 'event', "CTA", "signup", 'cancel');
   });
   $('#btnSignup').click(function(){
     //nameVal, emailVal, specVal, roleVal
+    ga('send', 'event', "CTA", "signup", 'attempt');
     var name = $('#nameVal').val().trim();
     var email = $("#emailVal").val().trim();
     var spec = $("#specVal").val().trim();
@@ -75,11 +79,13 @@ function enableGetStarted()
     }
     else{
       SaveData(name, email, spec, role);
+      ga('send', 'event', "CTA", "signup", 'signedup');
     }
   });
 
   $('#btnCancel').click(function(){
     document.getElementById("overlay").style.display = "none";
+    ga('send', 'event', "CTA", "signup", 'cancel');
   });
 }
 
