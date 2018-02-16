@@ -54,16 +54,16 @@ function enableGetStarted()
   $("button.CTA").click(function(e){
     document.getElementById("overlay").style.display = "block";
     btnID = $(this).attr("id");
-    gtag('event', 'CTA', {'event_category' : 'start','event_label' : btnID});
+    gtag('event', 'start', {'event_category' : 'CTA','event_label' : btnID});
     // gtag('send', 'event', 'CTA', 'start', btnID);
   });
   $(".closer").click(function(){
     document.getElementById("overlay").style.display = "none";
-    gtag('event', 'CTA', {'event_category' : 'signup','event_label' : 'cancel'});
+    gtag('event', 'signup', {'event_category' : 'CTA','event_label' : 'cancel'});
   });
   $('#btnSignup').click(function(){
     //nameVal, emailVal, specVal, roleVal
-    gtag('event', 'CTA', {'event_category' : 'signup','event_label' : 'attempt'});
+    gtag('event', 'signup', {'event_category' : 'CTA','event_label' : 'attempt'});
     var name = $('#nameVal').val().trim();
     var email = $("#emailVal").val().trim();
     var spec = $("#specVal").val().trim();
@@ -80,13 +80,13 @@ function enableGetStarted()
     }
     else{
       SaveData(name, email, spec, role);
-      gtag('event', 'CTA', {'event_category' : 'signup','event_label' : 'success'});
+      gtag('event', 'signup', {'event_category' : 'CTA','event_label' : 'success'});
     }
   });
 
   $('#btnCancel').click(function(){
     document.getElementById("overlay").style.display = "none";
-    gtag('event', 'CTA', {'event_category' : 'signup','event_label' : 'cancel'});
+    gtag('event', 'signup', {'event_category' : 'CTA','event_label' : 'cancel'});
   });
 }
 
