@@ -13,13 +13,19 @@ h1, h2,h3,h4 {
   padding-bottom:0px;
 }
 .title, .logo {
-  line-height:2.5em;
+  /*line-height:2.5em;*/
   font-size:2em;
+}
+.title
+{
+  float:left;
 }
 .subtitle {
   /*font-family:"Rozha One", sans-serif;*/
-  font-size:1.5;
-  margin-top:-1em;
+  font-family:"Crimson Text", sans-serif;
+  font-size:0.5em;
+  float:left;
+  
 }
 .header {
   color:white;
@@ -33,6 +39,57 @@ h1, h2,h3,h4 {
   text-align: left;
   transition: background 0.5s ease-in-out;
 }
+.navLinks{
+  font-family:"Rozha One", sans-serif;
+  float:right;
+  color:white; 
+  font-size:1.5em;
+  
+}
+ul.links{
+  list-style-type: none;
+}
+li.link{
+  float: left;
+}
+li.link a{
+  display:block;
+  text-align: center;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:8px;
+  padding-bottom:8px;
+  text-decoration: none;
+  color:white;
+}
+li.link a:hover{
+  background-color:#111111;
+}
+li.link a:active{
+  color:#ededed;
+}
+
+
+@media only screen and (max-width: 594px) {
+  /* This CSS will be applied only to phones and other small devices. */
+  .navLinks{
+    font-size:0.8em;
+  }
+  li.link{
+    float:none;
+  }
+}
+@media only screen and (max-width:348px){
+  .navLinks{
+    display:none;
+  }
+}
+li.link a.activeMenuItem
+{
+  background-color:#9ebed8;
+  color:#0a1928;
+}
+
 .transHeader {
   background-color:rgba(10,25,40,0.6);
 }
