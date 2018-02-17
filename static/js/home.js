@@ -135,7 +135,7 @@ function SetMenuScrollAnimation()
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        scrollOffset = target.offset().top - $(".header").outerHeight()-16;
+        scrollOffset = target.offset().top - $(".header").outerHeight();
         $('html, body').animate({
           scrollTop: scrollOffset
         }, 1000, function() {
