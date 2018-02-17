@@ -124,6 +124,7 @@ function SetMenuScrollAnimation()
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
+    gtag('event', 'Menu', {'event_category' : 'Navigation','event_label' : $(this).attr('id')});
     console.log("inside animationFrame!");
     // On-page links
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) 
