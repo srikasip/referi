@@ -320,7 +320,7 @@ div.prodItem{
 
 div.prod_imgBox{
   width:100%;
-  height:23vw;
+  height:20.5vw;
   background-color:rgb(10,25,40);
 }
 
@@ -356,10 +356,10 @@ span.prod_caption{
     margin-right:auto;
   }
   div.prod_imgBox{
-    height:45vw;
-    min-height:193px;
+    height:40vw;
+    min-height:172px;
   }
-  div.prod_caption{
+  span.prod_caption{
     text-align:left;
   }
 
