@@ -1,10 +1,23 @@
 backgroundCounter = 0;
+var activeScene, windowHeight;
+
+// extension:
+$.fn.scrollEnd = function(callback, timeout) {          
+  $(this).scroll(function(){
+    var $this = $(this);
+    if ($this.data('scrollTimeout')) {
+      clearTimeout($this.data('scrollTimeout'));
+    }
+    $this.data('scrollTimeout', setTimeout(callback,timeout));
+  });
+};
 
 $(document).ready(function(){
   ScrollerBehavior();
   SetMenuScrollAnimation();
   setTimeout(playDoughSetup, 5000);
   enableGetStarted();
+  setVisibilityAnalytics();
 });
 
 function ScrollerBehavior()
@@ -124,7 +137,7 @@ function SetMenuScrollAnimation()
   .not('[href="#0"]')
   .click(function(event){
     gtag('event', 'Menu', {'event_category' : 'Navigation','event_label' : $(this).attr('id')});
-    console.log("inside animationFrame!");
+    //console.log("inside animationFrame!");
     // On-page links
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) 
     {
@@ -156,3 +169,53 @@ function SetMenuScrollAnimation()
     $(this).addClass('activeMenuItem');
   });
 }
+
+function setVisibilityAnalytics(){
+  activeScene = $(".playdough");
+  activeSceneNum = -1;
+  windowHeight = $(document).outerHeight();
+  sceneHeight = $(".scene").outerHeight();
+  offset = $(".header").outerHeight();
+  // console.log("Window Height: " + String(windowHeight));
+  // console.log("Header Height: " + String(offset));
+  bounderies = [];
+  sceneNames = ["Product", "Need", "Team"];
+  $(".scene").each(function(index){
+    sceneObj = {};
+    sceneObj["topPosition"] = parseInt($(this).offset().top);
+    sceneObj["bottomPosition"] = parseInt($(this).outerHeight() + $(this).offset().top);
+    sceneObj["id"] = $(this).attr('id');
+    bounderies.push(sceneObj);
+  });
+
+  // console.log(bounderies);
+  // how to call it (with a 1000ms timeout):
+  $(window).scrollEnd(function(){
+    currScroll = $(window).scrollTop() + offset + 16;
+    sceneNumber = returnScene(currScroll, bounderies);
+    // console.log("Scroll ended: " + String(currScroll));
+    if(sceneNumber != activeSceneNum){
+      //console.log("Active scene changed!");
+      activeSceneNum = sceneNumber;
+      if(sceneNumber >= 0){
+        //console.log("Current Scene is: " + sceneNames[sceneNumber]);
+        gtag('event', 'reading', {'event_category' : 'Consumption','event_label' : sceneNames[sceneNumber]});
+      }
+      
+    }
+
+  }, 1000);
+}
+
+function returnScene(currScroll, allScenes){
+  currentSceneIndex = -1
+  for (var i = 0, len = allScenes.length; i < len; i++) {
+    if(currScroll<allScenes[i]["bottomPosition"] && currScroll>= allScenes[i]["topPosition"]){
+      currentSceneIndex = i;
+      break;
+    }
+  }
+  //console.log("Current Scene Index: " + String(currentSceneIndex));
+  return currentSceneIndex;
+}
+
