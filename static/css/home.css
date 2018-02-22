@@ -1,9 +1,16 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html, body {
   width:100%;
   height:100%;
   font-family:"Crimson Text", sans-serif;
   font-size:14pt;
+  margin:0;
+  padding:0;
   /*background-color:rgb(10,25,40);*/
+  background-color:purple;
 }
 h1,h2,h3,h4,.title, .logo {
   font-family:"Rozha One", sans-serif;
@@ -11,6 +18,9 @@ h1,h2,h3,h4,.title, .logo {
 h1, h2,h3,h4 {
   padding-top:0px;
   padding-bottom:0px;
+}
+h2{
+  font-size:1.15em
 }
 .title, .logo {
   /*line-height:2.5em;*/
@@ -116,11 +126,15 @@ li.link a.activeMenuItem
 }
 .scene {
   /*background-color:#9ebed8;*/
+  min-width:100%;
   background-color:#fff;
   min-height:90vh;
   padding:16px;
   position:relative;
   z-index:2;
+  float:none;
+  clear:both;
+  overflow:hidden;
 }
 
 .caption {
@@ -287,10 +301,66 @@ div.validator{
   display:none;
 }
 
-div.cheekyAnnot
-{
+div.cheekyAnnot{
   width:100%;
   float:none;
   clear:both;
   text-align:center;
+}
+
+div.prodItem{
+  width:41vw;
+  min-width:343px;
+  float:left;
+  margin-left:6%;
+  margin-bottom:32px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+div.prod_imgBox{
+  width:100%;
+  height:23vw;
+  background-color:rgb(10,25,40);
+}
+
+img.prod_img{
+  width:100%;
+  height:100%;
+}
+
+span.prod_caption{
+  display:block;
+  width:100%;
+  height:5em;
+  background-color:#dedede;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+@media only screen and (max-width: 836px) {
+  /* This CSS will be applied only to phones and other small devices. */
+
+  #scene1{
+    text-align:center;
+  }
+  div.prodItem{
+    float:none;
+    clear:both;
+    width:80vw;
+    min-width:343px;
+    
+    margin-left:auto;
+    margin-right:auto;
+  }
+  div.prod_imgBox{
+    height:45vw;
+    min-height:193px;
+  }
+  div.prod_caption{
+    text-align:left;
+  }
+
 }

@@ -114,7 +114,6 @@ function SaveData(nameVal, emailVal, specVal, roleVal){
   .always(function(msg){
     console.log(msg);
   });
-
 }
 
 function SetMenuScrollAnimation()
@@ -123,7 +122,7 @@ function SetMenuScrollAnimation()
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
-  .click(function(event) {
+  .click(function(event){
     gtag('event', 'Menu', {'event_category' : 'Navigation','event_label' : $(this).attr('id')});
     console.log("inside animationFrame!");
     // On-page links
