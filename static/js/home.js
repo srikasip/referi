@@ -43,7 +43,7 @@ function ScrollerBehavior()
 function playDoughSetup(){
   //background:url('../images/evocImg1.jpg');
   // console.log("I am in playdough");
-  fileNames = ["evocImg1.jpg", "money.jpg", "dashprac.png"];
+  fileNames = ["blackbridge.jpg", "money.jpg", "dashprac.png"];
 
   backgroundCounter += 1;
   if(fileNames.length <= backgroundCounter){

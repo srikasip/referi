@@ -107,7 +107,7 @@ li.link a.activeMenuItem
   background-color:rgba(10,25,40,1.0);
 }
 .playdough {
-  background-image:url('../images/evocImg1.jpg');
+  background-image:url('../images/blackbridge.jpg');
   /*background-image:url('../images/dashprac.png');*/
   background-position:center center;
   background-repeat:none;
@@ -156,6 +156,7 @@ li.link a.activeMenuItem
 .caption p {
   width:100%;
 }
+
 button.CTA {
   height:15vh;
   font-size:1.5em;
@@ -186,6 +187,15 @@ button.CTA:hover {
 .playdough .CTABox {
   margin-top:0px;
 }
+
+#needListTop li{
+  margin-top:16px;
+}
+
+li.ref{
+  vertical-align: super;
+}
+
 .teamPic {
   height:300px;
   width:300px;
@@ -260,6 +270,8 @@ input.suContent
 {
   width:70%;
   margin-top:-5px;
+  border:none;
+  border-bottom:Solid 2px rgb(245,108,31);
 }
 #signup p{
   padding:16px;
