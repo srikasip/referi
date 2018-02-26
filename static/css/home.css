@@ -49,6 +49,11 @@ h2{
   text-align: left;
   transition: background 0.5s ease-in-out;
 }
+.titleLink
+{
+  text-decoration: none;
+  color:#fff;
+}
 .navLinks{
   font-family:"Rozha One", sans-serif;
   float:right;
