@@ -107,7 +107,7 @@ li.link a.activeMenuItem
 }
 .playdough {
   width:100%;
-  height:90vh;
+  height:80vh;
   position:fixed;
   z-index:1;
   top:0;
@@ -120,8 +120,8 @@ li.link a.activeMenuItem
   vertical-align: middle;
   
   min-width:100%;
-  max-width: calc(16 * 90vh / 9);
-  min-height:90vh;
+  max-width: calc(16 * 80vh / 9);
+  min-height:80vh;
   
   position: absolute;
   left: 50%;
@@ -197,7 +197,7 @@ li.link a.activeMenuItem
 .playdough .dotparent{
 position:absolute;
 width:70px;
-top:80vh;
+top:70vh;
 left:calc(50% - 35px);
 z-index: 10;
 }
@@ -246,14 +246,14 @@ z-index: 10;
 }*/
 
 #scene1 {
-  margin-top:90vh;
+  margin-top:80vh;
   min-height:45vh;
 }
 .scene {
   /*background-color:#9ebed8;*/
   min-width:100%;
   background-color:#fff;
-  min-height:90vh;
+  min-height:80vh;
   padding:16px;
   position:relative;
   z-index:2;
