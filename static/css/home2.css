@@ -1,0 +1,596 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width:100%;
+  height:100%;
+  font-family:"Crimson Text", sans-serif;
+  font-size:14pt;
+  margin:0;
+  padding:0;
+  /*background-color:rgb(10,25,40);*/
+  background-color:purple;
+}
+h1,h2,h3,h4,.title, .logo {
+  font-family:"Rozha One", sans-serif;
+}
+h1, h2,h3,h4 {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+h2{
+  font-size:1.15em
+}
+.title, .logo {
+  /*line-height:2.5em;*/
+  font-size:2em;
+}
+#dashLogo{
+  color:#ff8300;
+}
+.title
+{
+  float:left;
+}
+.titleLink:hover{
+  text-decoration: none;
+  color:#ccf2ff;
+}
+.titleLink:hover #dashLogo{
+  color:#ffa84c;
+}
+.subtitle {
+  /*font-family:"Rozha One", sans-serif;*/
+  font-family:"Crimson Text", sans-serif;
+  font-size:0.5em;
+  float:left;
+  
+}
+.header {
+  color:white;
+  width:100%;
+  padding:16px;
+  position:fixed;
+  z-index:3;
+  top:0;
+  left:0;
+  vertical-align: middle;
+  text-align: left;
+  transition: background 0.5s ease-in-out;
+}
+.titleLink
+{
+  text-decoration: none;
+  color:#fff;
+}
+.navLinks{
+  font-family:"Rozha One", sans-serif;
+  float:right;
+  color:white; 
+  font-size:1.5em;
+  
+}
+ul.links{
+  list-style-type: none;
+}
+li.link{
+  float: left;
+}
+li.link a{
+  display:block;
+  text-align: center;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:8px;
+  padding-bottom:8px;
+  text-decoration: none;
+  color:white;
+}
+li.link a:hover{
+  background-color:#111111;
+}
+li.link a:active{
+  color:#ededed;
+}
+li.link a.activeMenuItem
+{
+  background-color:#9ebed8;
+  color:#0a1928;
+}
+
+.transHeader {
+  background-color:rgba(10,25,40,0.6);
+}
+.opaqueHeader {
+  background-color:rgba(10,25,40,1.0);
+}
+.playdough {
+  width:100%;
+  height:90vh;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  text-align: center;
+}
+
+.mySlides {display: none;}
+.mySlides img {
+  vertical-align: middle;
+  
+  min-width:100%;
+  max-width: calc(16 * 90vh / 9);
+  min-height:90vh;
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height:100%;
+  
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.slideshow-container .prev, .slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slideshow-container .prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slideshow-container .prev:hover,.slideshow-container .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color:#ff8300;
+  text-decoration:none;
+
+}
+
+/* Caption text */
+.mySlides .text {
+  color: #f2f2f2;
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.playdough .dotparent{
+position:absolute;
+width:70px;
+top:80vh;
+left:calc(50% - 35px);
+z-index: 10;
+}
+
+.dot.active, .dot:hover {
+  background-color: #ff8300;
+}
+
+/* Fading animation */
+.fade {
+  opacity:1;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*.caption {
+  color:#fff;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  font-size:2.5em;
+  vertical-align: middle;
+  width:100%;
+  margin-top:5em;
+  display:none;
+  padding:16px;
+}
+
+.caption.active {
+  display:block;
+}
+.caption p {
+  width:100%;
+}*/
+
+#scene1 {
+  margin-top:90vh;
+  min-height:45vh;
+}
+.scene {
+  /*background-color:#9ebed8;*/
+  min-width:100%;
+  background-color:#fff;
+  min-height:90vh;
+  padding:16px;
+  position:relative;
+  z-index:2;
+  float:none;
+  clear:both;
+  overflow:hidden;
+}
+.howHolder{
+  float:none;
+  clear:both;
+  width:100%;
+  padding-left:5%;
+  padding-right:5%;
+  margin-left:auto;
+  margin-right:auto;
+  overflow-y: hidden;
+}
+.howItem{
+  min-height:200px;
+  width:30%;
+  float:left;
+  margin:0 1.5%;
+}
+.howHead{
+  clear:both;
+  float:none;
+  text-align: center;
+  vertical-align: middle;
+}
+.howHead span{
+  display: inline-block;
+  height:2em;
+  width:2em;
+  border-radius: 1em;
+  background-color:#ff8300;
+  font-size:1.5em;
+  line-height:1.9em;
+  color:#fff;
+  margin-left:10px;
+  margin-right:10px;
+}
+.howImg
+{
+  float:left;
+  width:30%;
+  height:calc(100% - 2em);
+}
+.howImg img{
+  width:100%;
+}
+.howExplainer{
+  float:left;
+  width:70%;
+  height:calc(100% - 2em);
+  padding:16px;
+  text-align:left;
+}
+button.CTA {
+  height:15vh;
+  font-size:1.5em;
+  padding-right:16px;
+  padding-left:16px;
+  color:#fff;
+  background-color:#ff8300;
+  border-radius: 10px;
+  border:none 0px transparent;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:16px;
+}
+
+button.CTA:hover {
+  background-color:rgb(245,108,31);
+}
+button.CTA:active {
+  background-color:rgb(230,91,20);
+}
+
+.CTABox {
+  clear:both;
+  height:15vh;
+  text-align:center;
+  margin-top:3em;
+}
+/*.playdough .CTABox {
+  margin-top:0px;
+}*/
+
+#needListTop li{
+  margin-top:16px;
+}
+
+li.ref {
+  vertical-align: super;
+}
+
+.teamPic {
+  height:300px;
+  width:300px;
+}
+.teamBlock
+{
+  width:332px;
+  float:left;
+  margin:16px;
+}
+.teamCaption
+{
+  width:100%;
+  height:auto;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    text-align:center;
+}
+#signup
+{
+  min-width:600px;
+  width:50%;
+  margin-top:8em;
+  height:450px;
+  background-color:white;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+}
+span.closer
+{
+  display:block;
+  position:absolute;
+  top:16px;
+  right:16px;
+  font-family:Helvetica;
+  cursor: pointer;
+  color:tomato;
+}
+
+.signupLine
+{
+  float:none;
+  clear:both;
+  width:100%;
+  padding:16px;
+}
+span.suLabel
+{
+  display:block;
+  float:left;
+  text-align: right;
+  width:25%;
+  margin-right:8px;
+}
+.suLabel span{
+  vertical-align: super;
+  color:tomato;
+}
+input.suContent
+{
+  width:70%;
+  margin-top:-5px;
+  border:none;
+  border-bottom:Solid 2px rgb(245,108,31);
+}
+#signup p{
+  padding:16px;
+  text-align:left;
+}
+button#btnSignup
+{
+  padding-right:16px;
+  padding-left:16px;
+  color:#fff;
+  background-color:rgb(245,108,31);
+  border-radius: 10px;
+  border:none 0px transparent;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:16px;
+}
+button#btnCancel{
+  padding-right:16px;
+  padding-left:16px;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:16px;  
+}
+
+div.validator{
+  clear:both;
+  color:tomato;
+  text-align: right;
+  width:100%;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:0px;
+  padding-bottom:0px;
+  height:0px;
+  overflow:visible;
+  font-size:0.75em;
+  display:none;
+}
+
+div.cheekyAnnot{
+  width:100%;
+  float:none;
+  clear:both;
+  text-align:center;
+}
+
+div.prodItem{
+  width:41vw;
+  min-width:343px;
+  float:left;
+  margin-left:6%;
+  margin-bottom:32px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+div.prod_imgBox{
+  width:100%;
+  height:20.5vw;
+  background-color:rgb(10,25,40);
+}
+
+img.prod_img{
+  width:100%;
+  height:100%;
+}
+
+span.prod_caption{
+  display:block;
+  width:100%;
+  height:5em;
+  background-color:#dedede;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+@media only screen and (max-width: 836px) {
+  /* This CSS will be applied only to phones and other small devices. */
+
+  .scene h1{
+    text-align:center;
+  }
+  div.prodItem{
+    float:none;
+    clear:both;
+    width:80vw;
+    min-width:343px;
+    
+    margin-left:auto;
+    margin-right:auto;
+  }
+  div.prod_imgBox{
+    height:40vw;
+    min-height:172px;
+  }
+  span.prod_caption{
+    text-align:left;
+  }
+
+  .howImg
+  {
+    display:none;
+  }
+  .howExplainer{
+    float:none;
+    clear:both;
+    width:100%;
+    height:calc(100% - 2em);
+    padding:16px;
+    text-align:center;
+  }
+
+}
+@media only screen and (max-width: 594px) {
+  /* This CSS will be applied only to phones and other small devices. */
+  .howItem{
+    float:none;
+    clear:both;
+    width:90%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+    text-align:center;
+  }
+  .howHead{
+    display:none;
+  }
+  .howImg
+  {
+    display:block;
+    width:100%;
+    float:none;
+    clear:both;
+    height:8em;
+    text-align:center;
+  }
+  .howImg img
+  {
+    height:100%;
+    width:auto;
+  }
+  .howExplainer{
+    float:none;
+    clear:both;
+    width:100%;
+    height:calc(100% - 2em);
+    padding:16px;
+    text-align:center;
+  }
+}
+@media only screen and (max-width:348px){
+  .navLinks{
+    display:none;
+  }
+  .howImg
+  {
+    display:block;
+    width:100%;
+    float:none;
+    clear:both;
+    height:5em;
+    text-align:center;
+  }
+}
