@@ -47,6 +47,8 @@ function enableGetStarted()
     document.getElementById("overlay").style.display = "block";
     btnID = $(this).attr("id");
     gtag('event', 'start', {'event_category' : 'CTA','event_label' : btnID});
+    fbq('track', 'CompleteRegistration');
+
     // gtag('send', 'event', 'CTA', 'start', btnID);
   });
   $(".closer").click(function(){
