@@ -114,7 +114,7 @@ function SetMenuScrollAnimation()
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event){
-    gtag('event', 'Menu', {'event_category' : 'Navigation','event_label' : $(this).attr('id')});
+    //gtag('event', 'Menu', {'event_category' : 'Navigation','event_label' : $(this).attr('id')});
     //console.log("inside animationFrame!");
     // On-page links
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) 
@@ -147,7 +147,7 @@ function setVisibilityAnalytics(){
   // console.log("Window Height: " + String(windowHeight));
   // console.log("Header Height: " + String(offset));
   bounderies = [];
-  sceneNames = ["Product", "Need"];
+  sceneNames = ["How", "Product", "Need"];
   $(".scene").each(function(index){
     sceneObj = {};
     sceneObj["topPosition"] = parseInt($(this).offset().top);
@@ -167,7 +167,7 @@ function setVisibilityAnalytics(){
       activeSceneNum = sceneNumber;
       if(sceneNumber >= 0){
         //console.log("Current Scene is: " + sceneNames[sceneNumber]);
-        //gtag('event', 'reading', {'event_category' : 'Consumption','event_label' : sceneNames[sceneNumber]});
+        gtag('event', 'reading', {'event_category' : 'Consumption','event_label' : sceneNames[sceneNumber]});
       }
     }
   }, 1000);
