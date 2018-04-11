@@ -362,14 +362,18 @@ z-index: 10;
     filter: grayscale(100%);
   }
 }
-
+.howItem h2{
+  text-align:center;
+}
 
 
 .howExplainer{
   float:left;
+  font-size:14pt;
   width:70%;
   height:calc(100% - 2em);
   padding:16px;
+  padding-top:0px;
   text-align:left;
 }
 button.CTA {
@@ -631,6 +635,17 @@ span.prod_caption{
   {
     height:100%;
     width:auto;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  .howImg img.onScreen {
+    -webkit-animation-name: none;
+    animation-name: none;
+    
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
   }
   .howExplainer{
     float:none;
@@ -653,5 +668,18 @@ span.prod_caption{
     clear:both;
     height:5em;
     text-align:center;
+  }
+  .howImg img{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  .howImg img.onScreen {
+    -webkit-animation-name: none;
+    animation-name: none;
+    
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
   }
 }
