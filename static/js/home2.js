@@ -45,9 +45,9 @@ $(document).ready(function(){
 function ScrollerBehavior()
 {
   topPos = $(document).scrollTop();
-  numWindows = 100*(topPos/parseFloat($(window).outerHeight()));
+  numWindows = 100*((topPos)/parseFloat($(window).outerHeight()));
   numWindows = Math.round(numWindows)/100.0;
-  if(numWindows < 0.7){
+  if(numWindows < 0.6){
     if($(".header").hasClass("opaqueHeader")){
       $(".header").removeClass("opaqueHeader");
       $(".header").addClass("transHeader");
