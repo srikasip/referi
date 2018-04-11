@@ -2,6 +2,27 @@ backgroundCounter = 0;
 var activeScene, windowHeight;
 var slideIndex = 1;
 
+//Utility Function for seeing if item is in view
+function Utils() {
+
+}
+Utils.prototype = {
+    constructor: Utils,
+    isElementInView: function (element, fullyInView) {
+        var pageTop = $(window).scrollTop() + 111;
+        var pageBottom = pageTop + $(window).height() - 111;
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).height();
+
+        if (fullyInView === true) {
+            return ((pageTop < elementTop) && (pageBottom > elementBottom));
+        } else {
+            return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+        }
+    }
+};
+var Utils = new Utils();
+
 // extension:
 $.fn.scrollEnd = function(callback, timeout) {          
   $(this).scroll(function(){
@@ -18,6 +39,7 @@ $(document).ready(function(){
   enableGetStarted();
   showSlides(slideIndex);
   setVisibilityAnalytics();
+  setHowIconColoring();
 });
 
 function ScrollerBehavior()
@@ -174,6 +196,19 @@ function setVisibilityAnalytics(){
     }
   }, 1000);
 }
+
+function setHowIconColoring(){
+  var isElementInView = Utils.isElementInView($('.howImg img'), true);
+
+  if ((isElementInView) && ($('.howImg img').hasClass('onScreen') == false)) {
+      $('.howImg img').addClass('onScreen');
+  } else if((isElementInView == false) && ($('.howImg img').hasClass('onScreen'))) {
+      $('.howImg img').removeClass('onScreen');
+  }
+
+  requestAnimationFrame(setHowIconColoring);
+}
+
 
 function returnScene(currScroll, allScenes){
   currentSceneIndex = -1
