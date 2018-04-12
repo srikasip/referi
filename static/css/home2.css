@@ -661,10 +661,33 @@ span.prod_caption{
     text-align:center;
   }
 }
-@media only screen and (max-width:348px){
-  .navLinks{
-    display:none;
+@media only screen and (max-width:400px){
+  .scene2{
+    padding:0;
+    margin-left:0;
+    margin-right:0;
   }
+  div.prodItem{
+    float:none;
+    clear:both;
+    width:80vw;
+    min-width:280px;
+    
+    margin-left:auto;
+    margin-right:auto;
+  }
+  div.prod_imgBox{
+    height:40vw;
+    min-height:172px;
+  }
+  img.prod_img{
+    height:100%;
+    width:auto;
+  }
+  span.prod_caption{
+    text-align:left;
+  }
+
   .howImg
   {
     display:block;
@@ -686,5 +709,8 @@ span.prod_caption{
     
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
+  }
+  .CTABox h3{
+    display: none;
   }
 }
