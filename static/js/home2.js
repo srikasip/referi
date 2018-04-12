@@ -79,7 +79,7 @@ function enableGetStarted()
   $('#btnSignup').click(function(){
     //nameVal, emailVal, specVal, roleVal
     gtag('event', 'signup', {'event_category' : 'CTA','event_label' : 'attempt'});
-    var name = $('#nameVal').val().trim();
+    var name = ''//$('#nameVal').val().trim();
     var email = $("#emailVal").val().trim();
     var spec = $("#specVal").val().trim();
     var role = $("#roleVal").val().trim();

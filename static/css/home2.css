@@ -450,10 +450,13 @@ li.ref {
 }
 #signup
 {
-  min-width:600px;
-  width:50%;
+  /*min-width:600px;*/
+  width:400px;
+  max-width:100%;
   margin-top:8em;
   height:450px;
+  max-height:100%;
+  overflow-y: scroll;
   background-color:white;
   margin-left:auto;
   margin-right:auto;
@@ -477,6 +480,12 @@ span.closer
   width:100%;
   padding:16px;
 }
+.signupLineHalf
+{
+  float:left;
+  width:50%;
+  padding:16px;
+}
 span.suLabel
 {
   display:block;
@@ -494,18 +503,27 @@ input.suContent
   width:70%;
   margin-top:-5px;
   border:none;
-  border-bottom:Solid 2px rgb(245,108,31);
+  border-bottom:Solid 1px #ff8300;;
 }
 #signup p{
-  padding:16px;
+  padding-left:16px;
+  padding-right:16px;
+  padding-bottom:4px;
+  padding-top:4px;
   text-align:left;
+}
+#signup p.annotation{
+  padding-bottom:0px;
+  padding-top:0px;
+  color:#ff8300;
+  text-align:center;
 }
 button#btnSignup
 {
   padding-right:16px;
   padding-left:16px;
   color:#fff;
-  background-color:rgb(245,108,31);
+  background-color:#ff8300;
   border-radius: 10px;
   border:none 0px transparent;
   margin-right: auto;
